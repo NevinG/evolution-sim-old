@@ -3,7 +3,7 @@
 }
 
 html, body{
-    height: 100%;
+    height: calc(100% - 20px);
     overflow: hidden;
     margin: 0;
 }
