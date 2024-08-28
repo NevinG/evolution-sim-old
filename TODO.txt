@@ -1,0 +1,14 @@
+*Add kill on generation end zone
+*Xvelocity, YVelocity vs Velocity & angular velocity
+*When screen size changes I still want everything to render correctly
+*choose activation functions for NN
+*Different types of vision:
+   *raycasts
+   *n closest other agents
+*Add a render toggle
+*Add color vision, also make raycasts show color of what they hit
+   *Add color of what you're standing on
+*Make add obstacle have "snap to grid" toggle
+*Efficiency improvements by making obstacles shapes?? not just polygons
+
+*Seperate but need to write it down, a decompilation website project

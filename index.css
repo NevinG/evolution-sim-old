@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+
+#game-container{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#renderer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#renderer{
+    width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1;
+}

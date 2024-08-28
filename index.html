@@ -1,0 +1,119 @@
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="Agent.js" defer></script>
+        <script src="World.js" defer></script>
+        <script src="NN.js" defer></script>
+
+        <script src="index.js" defer></script>
+        <script src="config.js" defer></script>
+    </head>
+    
+    <body>
+        <div id="game-container">
+            <div id="renderer-container">
+                <canvas id="renderer"></canvas>
+            </div>
+            <div style="padding-left: 10px; overflow: auto">
+                <h1>Config</h1>
+                <label>Width: </label> 
+                <input id="input-width", style="width: 100px", type="number", min="0", step="1", value="20">
+
+                <label>Height: </label>
+                <input id="input-height", style="width: 100px", type="number", min="0", step="1", value="20">
+                <br>
+                <button id="submit-world">Generate World</button>
+                <div>
+                    <br>
+                    <button id="input-addObstacle">Add obstacle</button>
+                    <br>
+                    <button id="input-addKillZone">Add Kill Zone</button>
+                    <br>
+                </div>
+                <hr>
+                <div>
+                    <div id = "agents-container">
+                        <div>
+                            <label>Agent0 # of rays: </label>
+                            <input id="input-agent1Rays", style="width: 100px", type="number", min="0", step="1", value="5">
+                            <br>
+
+                            <label>Agent0 fov: </label>
+                            <input id="input-agent1Fov", style="width: 100px", type="number", min="0", step="1", max="360", value="135">
+                            <br>
+    
+                            <label>Agent0 view distance: </label>
+                            <input id="input-agent1ViewDistance", style="width: 100px", type="number", min="0", step="1", value="5">
+                            <br>
+
+                            
+                            <label style="position: relative; top: -1rem">Agent0 brain inputs: </label>
+                            <select id="input-agent1BrainInputs", style="width: 100px; height: 3rem;", multiple>
+                                <option selected value="raycasts">Raycasts</option>
+                                <option value="velocity">Velocity</option>
+                                <option value="angularVelocity">Angular Veloctiy</option>
+                                <option value="xpos">X Position</option>
+                                <option value="ypos">Y Position</option>
+                                <option selected value="random">Random</option>
+                            </select>
+                            <br>
+
+                           
+                            <label>Agent0 brain hidden layers: </label>
+                            <input id="input-agent1BrainHiddenLayers", style="width: 100px", type="text", value="[6]">
+                            <br>
+
+                            
+                            <label style="position: relative; top: -1rem">Agent0 brain outputs: </label>
+                            <select id="input-agent1BrainOutputs", style="width: 100px; height: 3rem;", multiple>
+                                <option selected value="velocity">Velocity</option>
+                                <option selected value="angularVelocity">Angular Veloctiy</option>
+                            </select>
+                            <br>
+    
+                            
+                            <label># of Agent0: </label>
+                            <input id="input-numAgent1", style="width: 100px", type="number", min="0", step="1", value="20">
+                            <hr>
+                        </div>
+                    </div>
+                    <button id="input-addAgent">Add Another Agent Type</button>
+                </div>
+
+                <div>
+                    <br>
+                    <button id="submit-agents">Generate Agents</button>
+                </div>
+                <hr>
+
+                <label>Gridlines: </label> <input id="input-gridlines" type="checkbox" checked>
+                <br>
+                <label>Border: </label> <input id="input-border" type="checkbox" checked>
+                <br>
+                <label>View Raycasts: </label> <input id="input-viewRaycasts" type="checkbox">
+                <br>
+                <label>Kill On Agent Touch:</label> <input id="input-killOnTouch" type="checkbox">
+                <br>
+                <label>Kill On Border Touch:</label> <input id="input-killOnBorderTouch" type="checkbox">
+                <br>
+                <label>World Borders</label> <input id="input-worldBorders" type="checkbox" checked>
+                <br>
+
+                <label>Playback speed (steps / second): </label>
+                <input id="input-playbackSpeed", type="number", min="0", step="1", value="20">
+                <br>
+
+                <label>Steps per generation</label>
+                <input id="input-stepsPerGen", type="number", min="0", step="1", value="200">
+                <br>
+                <label>Repopulate Generation</label>
+                <input id="input-repopulateCheckbox" type="checkbox">
+                <input id="input-repopulateAmount", type="number", min="0", step="1", value="20" disabled>
+                <br>
+
+                <button id="input-playPause">Play/Pause</button>
+                <button id="input-simulationStep">Step</button>
+            </div>
+        </div>
+    </body>
+</html>
